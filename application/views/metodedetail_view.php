@@ -221,7 +221,7 @@
                 									<tr>
 										              <td><?php echo $no++ ?></td>
 										              <td><?php echo $hasil->id_pasien ?></td>
-										              <td><?php echo $hasil->id_gejala ?></td>
+										              <td><?php echo $hasil->nama_gejala ?></td>
 										              <td><?php echo $hasil->nilai ?></td>
 										            </tr>
 
@@ -359,7 +359,7 @@
 										          ?>
 										            <tr>
 										              <td><?php echo $no++ ?></td>
-										              <td><?php echo $hasil->id_penyakit ?></td>
+										              <td><?php echo $hasil->nama_penyakit ?></td>
 										            </tr>
 										          <?php } ?>
 										        </tbody>     

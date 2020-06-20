@@ -23,6 +23,7 @@ Class MetodeUser extends CI_Controller{
         // $this->metode_model->select_gejala();
         // Simpan hasil hitung jarak
         $id_pasien=$this->uri->segment(2);
+        $jumlahpasien=6;
         for($i=2; $i<=6; $i++){
             for($j=2; $j<=6; $j++){
                 //var datalatih

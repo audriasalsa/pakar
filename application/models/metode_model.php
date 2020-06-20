@@ -131,7 +131,35 @@ class metode_model extends CI_Model
             $G17 = $query->row();
             return $G17;
         }
-        
+        elseif ($k=18) {
+            $G18 = $query->row();
+            return $G18;
+        }
+        elseif ($k=19) {
+            $G19 = $query->row();
+            return $G19;
+        }
+        elseif ($k=20) {
+            $G20 = $query->row();
+            return $G20;
+        }
+        elseif ($k=21) {
+            $G21 = $query->row();
+            return $G21;
+        }
+        elseif ($k=22) {
+            $G22 = $query->row();
+            return $G22;
+        }
+        elseif ($k=23) {
+            $G23 = $query->row();
+            return $G23;
+        }
+        elseif ($k=24) {
+            $G24 = $query->row();
+            return $G24;
+        }
+
     }
 
     public function select_gtes($j,$k){
@@ -208,6 +236,34 @@ class metode_model extends CI_Model
         elseif ($k=17) {
             $Gtes17 = $query->row();
             return $Gtes17;
+        }
+        elseif ($k=18) {
+            $Gtes18 = $query->row();
+            return $Gtes18;
+        }
+        elseif ($k=19) {
+            $Gtes19 = $query->row();
+            return $Gtes19;
+        }
+        elseif ($k=20) {
+            $Gtes20 = $query->row();
+            return $Gtes20;
+        }
+        elseif ($k=21) {
+            $Gtes21 = $query->row();
+            return $Gtes21;
+        }
+        elseif ($k=22) {
+            $Gtes22 = $query->row();
+            return $Gtes22;
+        }
+        elseif ($k=23) {
+            $Gtes23 = $query->row();
+            return $Gtes23;
+        }
+        elseif ($k=24) {
+            $Gtes24 = $query->row();
+            return $Gtes24;
         }
         
     }
@@ -288,6 +344,34 @@ class metode_model extends CI_Model
             return $Guji17;
         }
         
+        elseif ($k=18) {
+            $Guji18 = $query->row();
+            return $Guji18;
+        }
+        elseif ($k=19) {
+            $Guji19 = $query->row();
+            return $Guji19;
+        }
+        elseif ($k=20) {
+            $Guji20 = $query->row();
+            return $Guji20;
+        }
+        elseif ($k=21) {
+            $Guji21 = $query->row();
+            return $Guji21;
+        }
+        elseif ($k=22) {
+            $Guji22 = $query->row();
+            return $Guji22;
+        }
+        elseif ($k=23) {
+            $Guji23 = $query->row();
+            return $Guji23;
+        }
+        elseif ($k=24) {
+            $Guji24 = $query->row();
+            return $Guji24;
+        }
     }
 
     public function select_g2($i){

@@ -108,7 +108,7 @@
 
                 </form>
             </div>
-            <a href="#" class="text-center new-account">Buat Akun </a>
+            <a href="<?php echo base_url() ?>index.php/Login" class="text-center new-account">Masuk</a>
             <div id="error" style="margin-top: 10px"></div>
         </div>
     </div>

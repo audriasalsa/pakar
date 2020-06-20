@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Medicio | Bootstrap Medical Template</title>
+    <title>Sistem Pakar Penyakit Ginekologi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -27,7 +27,7 @@
     <header class="header">
       <!-- Primary Navbar-->
       <nav class="navbar navbar-expand-lg navbar-light py-4 border-bottom border-gray bg-white">
-        <div class="container d-flex align-items-center justify-content-beween"><a class="navbar-brand" href="#"><img src="<?php echo base_url('assets/img/logo.svg')?>" alt="" width="170"></a>
+        <div class="container d-flex align-items-center justify-content-beween"><a class="navbar-brand" href="#"><img src="<?php echo base_url('assets/img/your-logo.png')?>" alt=""height="30"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         </div>
       </nav>
@@ -83,8 +83,8 @@
               <label>Apakah anda merasakan nyeri pada punggung?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G1" value="3"> Ya
-              <input type="radio" name="G1" value="10"> Terkadang
+              <input type="radio" name="G1" value="11"> Ya
+              <input type="radio" name="G1" value="5"> Terkadang
               <input type="radio" name="G1" value="0"> Tidak
             </div>
           </div>
@@ -94,8 +94,8 @@
               <label>Apakah anda merasakan nyeri saat menstruasi?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G2" value="4"> Ya
-              <input type="radio" name="G2" value="10"> Terkadang
+              <input type="radio" name="G2" value="11"> Ya
+              <input type="radio" name="G2" value="5"> Terkadang
               <input type="radio" name="G2" value="0"> Tidak
             </div>
           </div>
@@ -105,8 +105,8 @@
               <label>Apakah menstruasi anda tidak teratur?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G3" value="3"> Ya
-              <input type="radio" name="G3" value="10"> Terkadang
+              <input type="radio" name="G3" value="19"> Ya
+              <input type="radio" name="G3" value="9"> Terkadang
               <input type="radio" name="G3" value="0"> Tidak
             </div>
           </div>
@@ -116,8 +116,8 @@
               <label>Apakah anda mengalami pendarahan yang berlebihan pada saat menstruasi?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G4" value="4"> Ya
-              <input type="radio" name="G4" value="10"> Terkadang
+              <input type="radio" name="G4" value="22"> Ya
+              <input type="radio" name="G4" value="14"> Terkadang
               <input type="radio" name="G4" value="0"> Tidak
             </div>
           </div>
@@ -127,8 +127,8 @@
               <label>Apakah anda merasakan sakit saat berhubungan seksual?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G5" value="5"> Ya
-              <input type="radio" name="G5" value="10"> Terkadang
+              <input type="radio" name="G5" value="12"> Ya
+              <input type="radio" name="G5" value="5"> Terkadang
               <input type="radio" name="G5" value="0"> Tidak
             </div>
           </div>
@@ -138,8 +138,8 @@
               <label>Apakah anda merasakan nyeri saat buang air besar dan saat buang air kecil?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G6" value="4"> Ya
-              <input type="radio" name="G6" value="10"> Terkadang
+              <input type="radio" name="G6" value="28"> Ya
+              <input type="radio" name="G6" value="7"> Terkadang
               <input type="radio" name="G6" value="0"> Tidak
             </div>
           </div>
@@ -149,8 +149,8 @@
               <label>Apakah terdapat darah pada urin atau feses anda?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G7" value="3"> Ya
-              <input type="radio" name="G7" value="10"> Terkadang
+              <input type="radio" name="G7" value="28"> Ya
+              <input type="radio" name="G7" value="7"> Terkadang
               <input type="radio" name="G7" value="0"> Tidak
             </div>
           </div>
@@ -160,8 +160,8 @@
               <label>Apakah anda mengalami susah hamil?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G8" value="4"> Ya
-              <input type="radio" name="G8" value="10"> Terkadang
+              <input type="radio" name="G8" value="8"> Ya
+              <input type="radio" name="G8" value="4"> Terkadang
               <input type="radio" name="G8" value="0"> Tidak
             </div>
           </div>
@@ -171,8 +171,8 @@
               <label>Apakah anda mengalami kembung pada perut?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G9" value="3"> Ya
-              <input type="radio" name="G9" value="10"> Terkadang
+              <input type="radio" name="G9" value="9"> Ya
+              <input type="radio" name="G9" value="3"> Terkadang
               <input type="radio" name="G9" value="0"> Tidak
             </div>
           </div>
@@ -182,8 +182,8 @@
               <label>Apakah anda mengalami diare?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G10" value="3"> Ya
-              <input type="radio" name="G10" value="10"> Terkadang
+              <input type="radio" name="G10" value="53"> Ya
+              <input type="radio" name="G10" value="21"> Terkadang
               <input type="radio" name="G10" value="0"> Tidak
             </div>
           </div>
@@ -193,7 +193,7 @@
               <label>Apakah anda mengalami sembelit?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G11" value="5"> Ya
+              <input type="radio" name="G11" value="21"> Ya
               <input type="radio" name="G11" value="10"> Terkadang
               <input type="radio" name="G11" value="0"> Tidak
             </div>
@@ -204,8 +204,8 @@
               <label>Apakah anda mengalami mual?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G12" value="5"> Ya
-              <input type="radio" name="G12" value="10"> Terkadang
+              <input type="radio" name="G12" value="22"> Ya
+              <input type="radio" name="G12" value="14"> Terkadang
               <input type="radio" name="G12" value="0"> Tidak
             </div>
           </div>
@@ -215,20 +215,75 @@
               <label>Apakah anda mengalami pendarahan diluar jadwal menstruasi?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G13" value="5"> Ya
-              <input type="radio" name="G13" value="10"> Terkadang
+              <input type="radio" name="G13" value="53"> Ya
+              <input type="radio" name="G13" value="21"> Terkadang
               <input type="radio" name="G13" value="0"> Tidak
             </div>
           </div>
           <hr />
           <div class="row">
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <label>Apakah anda menemukan pertumbuhan rambut tidak normal pada tubuh anda?</label>
+              <label>Apakah anda sering melakukan buang air kecil?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G14" value="4"> Ya
-              <input type="radio" name="G14" value="10"> Terkadang
+              <input type="radio" name="G14" value="11"> Ya
+              <input type="radio" name="G14" value="0"> Terkadang
               <input type="radio" name="G14" value="0"> Tidak
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <label>Apakah anda mengalami penurunan berat badan?</label>
+            </div>
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <input type="radio" name="G15" value="15"> Ya
+              <input type="radio" name="G15" value="10"> Terkadang
+              <input type="radio" name="G15" value="0"> Tidak
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <label>Apakah anda mengalami merasa kelelahan dan pusing?</label>
+            </div>
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <input type="radio" name="G16" value="22"> Ya
+              <input type="radio" name="G16" value="14"> Terkadang
+              <input type="radio" name="G16" value="0"> Tidak
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <label>Apakah anda mengalami nyeri panggul?</label>
+            </div>
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <input type="radio" name="G17" value="11"> Ya
+              <input type="radio" name="G17" value="5"> Terkadang
+              <input type="radio" name="G17" value="0"> Tidak
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <label>Apakah anda mudah kenyang?</label>
+            </div>
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <input type="radio" name="G18" value="16"> Ya
+              <input type="radio" name="G18" value="0"> Terkadang
+              <input type="radio" name="G18" value="0"> Tidak
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <label>Apakah terdapat pertumbuhan rambut tidak normal pada tubuh anda?</label>
+            </div>
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <input type="radio" name="G19" value="22"> Ya
+              <input type="radio" name="G19" value="11"> Terkadang
+              <input type="radio" name="G19" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -237,9 +292,9 @@
               <label>Apakah anda mengalami kerontokan rambut?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G15" value="3"> Ya
-              <input type="radio" name="G15" value="10"> Terkadang
-              <input type="radio" name="G15" value="0"> Tidak
+              <input type="radio" name="G20" value="22"> Ya
+              <input type="radio" name="G20" value="11"> Terkadang
+              <input type="radio" name="G20" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -248,9 +303,9 @@
               <label>Apakah anda mengalami kelebihan berat badan atau obesitas?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G16" value="3"> Ya
-              <input type="radio" name="G16" value="10"> Terkadang
-              <input type="radio" name="G16" value="0"> Tidak
+              <input type="radio" name="G21" value="22"> Ya
+              <input type="radio" name="G21" value="11"> Terkadang
+              <input type="radio" name="G21" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -259,9 +314,31 @@
               <label>Apakah terdapat munculnya jerawat?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G17" value="3"> Ya
-              <input type="radio" name="G17" value="10"> Terkadang
-              <input type="radio" name="G17" value="0"> Tidak
+              <input type="radio" name="G22" value="14"> Ya
+              <input type="radio" name="G22" value="7"> Terkadang
+              <input type="radio" name="G22" value="0"> Tidak
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <label>Apakah anda mengalami keputihan yang tidak normal?</label>
+            </div>
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <input type="radio" name="G23" value="50"> Ya
+              <input type="radio" name="G23" value="21"> Terkadang
+              <input type="radio" name="G23" value="0"> Tidak
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <label>Apakah terdapat munculnya jerawat?</label>
+            </div>
+            <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
+              <input type="radio" name="G24" value="28"> Ya
+              <input type="radio" name="G24" value="11"> Terkadang
+              <input type="radio" name="G24" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -275,51 +352,16 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 mb-4 mb-lg-0">
-            <h2 class="h5 lined text-white mb-4">About</h2>
-            <p class="text-muted text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-            <p class="text-muted text-small">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-google-plus"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-lg-5 mb-4 mb-lg-0">
-            <h2 class="h5 text-white lined mb-4">Quick Links</h2>
-            <div class="d-flex">
-              <ul class="list-unstyled d-inline-block mr-4 mb-0">
-                <li class="mb-2"><a class="footer-link" href="#">Make appointments </a></li>
-                <li class="mb-2"><a class="footer-link" href="#">Doctors team</a></li>
-                <li class="mb-2"><a class="footer-link" href="#">Departments services</a></li>
-                <li class="mb-2"><a class="footer-link" href="#">About our clinic</a></li>
-                <li class="mb-2"><a class="footer-link" href="#">Contact us</a></li>
-              </ul>
-              <ul class="list-unstyled d-inline-block mb-0">
-                <li class="mb-2"><a class="footer-link" href="index.html">Home </a></li>
-                <li class="mb-2"><a class="footer-link" href="about.html">About us</a></li>
-                <li class="mb-2"><a class="footer-link" href="contact.html">Contact us</a></li>
-                <li class="mb-2"><a class="footer-link" href="#">About our clinic</a></li>
-                <li class="mb-2"><a class="footer-link" href="#">Contact us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <h2 class="h5 text-white lined mb-4">Newsletter</h2>
-            <p class="text-muted text-small">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
-            <div class="input-group mb-3">
-              <input class="form-control text-muted bg-none border-primary" type="text" placeholder="Email address" aria-label="Recipient's username" aria-describedby="button-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
-              </div>
-            </div>
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <h2 class="h5 lined text-white mb-4">Sistem Pakar Penyakit Ginekologi</h2>
+            <p class="text-muted text-small">Provide best quality healthcare for you</p>
+            <p class="text-muted text-small">Sistem informasi yang berisi pengetahuan seorang pakar obstetri dan ginekologi sehingga dapat digunakan untuk konsultasi. Sistem pakar dapat membantu seorang pakar, bukan menggantikan.</p>
           </div>
         </div>
       </div>
       <div class="copyrights">       
         <div class="container text-center py-4">
-          <p class="mb-0 text-muted">&copy; 2019, Your company. Template designed by <a href="https://bootstraptemple.com">Bootstrap Temple</a>.</p>
+          <p class="mb-0 text-muted">&copy; 2020, Sistem Pakar Penyakit Ginekologi.</p>
         </div>
       </div>
     </footer>
