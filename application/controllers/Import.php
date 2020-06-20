@@ -114,4 +114,25 @@ class Import extends CI_Controller {
 		
 		redirect("Import"); // Redirect ke halaman awal (ke controller datalatih fungsi index)
 	}
+
+	public function search()
+    {
+        $keyword = $this->input->post('keyword');
+        $this->db->like('id_datalatih',$keyword);
+        $this->db->or_like('id_pasien',$keyword);
+        $this->db->or_like('id_gejala',$keyword);
+        $this->db->or_like('nilai',$keyword);
+        $this->db->or_like('id_penyakit',$keyword);
+        // $data_pasien['post'] = $this->db->get('tb_pasien')->result();
+        $data = array(
+
+            'title'     => 'Data Latih',
+            'datalatih' => $this->db->get('tb_datalatih')->result(),
+
+        );
+        // $this->template->load('template','tabel_pasien', $data);
+        
+        // $this->load->view('pencarian',$query);
+        $this->template->load('template','tabel_datalatih', $data);
+    }
 }

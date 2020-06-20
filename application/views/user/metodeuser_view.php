@@ -68,32 +68,201 @@
       </div>
     </section>
     <!-- Make Appointment Section-->
-    <section class="appointment">
-      <div class="container text-center">
-        <h2 class="lined lined-center">Data <span class="text-primary">Pasien</span></h2>
-        <p class="text-muted mb-5">Isi dengan data yang sebenarnya</p>
-        <div class="row">
-          <div class="col-lg-7 mx-auto">
-            <div class="card border-0 shadow-sm">
-              <div class="card-body border-top border-md border-primary p-5">
-                <?php echo validation_errors(); ?>
-                <?php echo form_open('KeluhanUser/simpan'); ?>
-                <form class="make-appointment-form" action="<?php echo base_url() ?>index.php/KeluhanUser/simpan" method="post">
-                  <div class="row">
-                    <div class="form-group col-lg-12 mb-4">
-                      <input class="form-control" type="text" name="nama_pasien" placeholder="Nama">
-                    </div>
-                    <div class="form-group col-lg-12 mb-4">
-                      <input class="form-control" type="text" name="umur" placeholder="Umur">
-                    </div>
-                    <div class="form-group col-lg-12">
-                      <button class="btn btn-primary btn-block" type="submit">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+    <section class="about">
+      <div class="container">   
+        <!-- <div class="row" >
+          <div class="col-xs-12">
+          <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>ID Datalatih</th>
+            <th>ID Datalatih 2</th>
+            <th>Jarak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $no = 1; 
+            foreach($data_euclidien as $hasil){ 
+          ?>
+          <tr>
+            <td><?php echo $no++ ?></td>
+            <td><?php echo $hasil->id_datalatih ?></td>
+            <td><?php echo $hasil->id_datalatih2 ?></td>
+            <td><?php echo $hasil->Jarak ?></td>
+          </tr>
+          <?php } ?>
+        </tbody>     
+      </table>
+      <br>
+      <h5>Menghitung Validitas</h5>
+          <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>ID Datalatih</th>
+            <th>ID Datalatih 2</th>
+            <th>Jarak</th>
+            <th>ID penyakit 1</th>
+            <th>ID penyakit 2</th>
+            <th>N</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $no = 1; 
+            foreach($data_ranking as $hasil){ 
+          ?>
+          <tr>
+            <td><?php echo $no++ ?></td>
+            <td><?php echo $hasil->id_datalatih ?></td>
+            <td><?php echo $hasil->id_datalatih2 ?></td>
+            <td><?php echo $hasil->Jarak ?></td>
+            <td><?php echo $hasil->id_penyakit1 ?></td>
+            <td><?php echo $hasil->id_penyakit2 ?></td>
+            <td><?php echo $hasil->n ?></td>
+          </tr>
+          <?php } ?>
+        </tbody>     
+      </table>
+      <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>ID Datalatih</th>
+            <th>Validitas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $no = 1; 
+            foreach($data_validitas as $hasil){ 
+          ?>
+            <tr>
+              <td><?php echo $no++ ?></td>
+              <td><?php echo $hasil->id_datalatih ?></td>
+              <td><?php echo $hasil->validitas ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>     
+      </table> -->
+       <h5>Data Gejala</h5>
+      <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>ID Pasien</th>
+            <th>ID Gejala</th>
+            <th>Nilai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $no = 1; 
+            foreach($data_uji as $hasil){ 
+          ?>
+            <tr>
+              <td><?php echo $no++ ?></td>
+              <td><?php echo $hasil->nama_pasien ?></td>
+              <td><?php echo $hasil->nama_gejala ?></td>
+              <?php
+                if ($hasil->nilai > 0) {
+                  $status = "Ya";
+                }
+                else{
+                  $status = "Tidak";
+                }
+              ?>
+              <td><?php echo $status ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>     
+      </table>
+      <!-- <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>ID Data Latih</th>
+            <th>ID Pasien</th>
+            <th>Jarak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $no = 1; 
+            foreach($data_euclidienuji as $hasil){ 
+          ?>
+            <tr>
+              <td><?php echo $no++ ?></td>
+              <td><?php echo $hasil->id_datalatih ?></td>
+              <td><?php echo $hasil->id_pasien ?></td>
+              <td><?php echo $hasil->Jarak ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>     
+      </table>
+      <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Ranking</th>
+            <th>ID Data Latih</th>
+            <th>Weight Voting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $no = 1; 
+            foreach($data_weightvoting as $hasil){ 
+          ?>
+            <tr>
+              <td><?php echo $no++ ?></td>
+              <td><?php echo $hasil->id_datalatih ?></td>
+              <td><?php echo $hasil->weightvoting ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>     
+      </table>
+      <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Ranking</th>
+            <th>ID Data Latih</th>
+            <th>Weight Voting</th>
+            <th>Penyakit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $no = 1; 
+            foreach($data_weightvotinglimit as $hasil){ 
+          ?>
+            <tr>
+              <td><?php echo $no++ ?></td>
+              <td><?php echo $hasil->id_datalatih ?></td>
+              <td><?php echo $hasil->weightvoting ?></td>
+              <td><?php echo $hasil->id_penyakit ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>     
+      </table> -->
+       <h5>Hasil Diagnosa</h5>
+      <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Diagnosa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            foreach($data_diagnosa as $hasil){ 
+          ?>
+            <tr>
+              <td><?php echo $hasil->nama_penyakit ?></td>
+            </tr>
+          <?php } ?>
+        </tbody>     
+      </table>
         </div>
       </div>
     </section>

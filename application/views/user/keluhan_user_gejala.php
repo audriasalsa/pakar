@@ -12,7 +12,7 @@
     <!-- Google fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,800&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400&amp;display=swap">
-    <!-- theme stylesheet-->
+    <!-- theme stylesheet--> 
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.default.css')?>" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/custom.css')?>">
@@ -69,6 +69,7 @@
     </section>
     <!-- Make Appointment Section-->
     <section class="appointment">
+
       <form action="<?php echo base_url() ?>index.php/KeluhanUserGejala/simpan/" method="post">
       <div class="container text-center">
         <!-- <input type="hidden" name="id_pasien" value="<?php echo $variable->id; ?>"> -->
@@ -82,9 +83,9 @@
               <label>Apakah anda merasakan nyeri pada punggung?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G1" value="10"> Ya
+              <input type="radio" name="G1" value="3"> Ya
               <input type="radio" name="G1" value="10"> Terkadang
-              <input type="radio" name="G1" value="10"> Tidak
+              <input type="radio" name="G1" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -93,9 +94,9 @@
               <label>Apakah anda merasakan nyeri saat menstruasi?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G2" value="10"> Ya
+              <input type="radio" name="G2" value="4"> Ya
               <input type="radio" name="G2" value="10"> Terkadang
-              <input type="radio" name="G2" value="10"> Tidak
+              <input type="radio" name="G2" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -104,9 +105,9 @@
               <label>Apakah menstruasi anda tidak teratur?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G3" value="10"> Ya
+              <input type="radio" name="G3" value="3"> Ya
               <input type="radio" name="G3" value="10"> Terkadang
-              <input type="radio" name="G3" value="10"> Tidak
+              <input type="radio" name="G3" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -115,9 +116,9 @@
               <label>Apakah anda mengalami pendarahan yang berlebihan pada saat menstruasi?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G4" value="10"> Ya
+              <input type="radio" name="G4" value="4"> Ya
               <input type="radio" name="G4" value="10"> Terkadang
-              <input type="radio" name="G4" value="10"> Tidak
+              <input type="radio" name="G4" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -126,9 +127,9 @@
               <label>Apakah anda merasakan sakit saat berhubungan seksual?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G5" value="10"> Ya
+              <input type="radio" name="G5" value="5"> Ya
               <input type="radio" name="G5" value="10"> Terkadang
-              <input type="radio" name="G5" value="10"> Tidak
+              <input type="radio" name="G5" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -137,9 +138,9 @@
               <label>Apakah anda merasakan nyeri saat buang air besar dan saat buang air kecil?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G6" value="10"> Ya
+              <input type="radio" name="G6" value="4"> Ya
               <input type="radio" name="G6" value="10"> Terkadang
-              <input type="radio" name="G6" value="10"> Tidak
+              <input type="radio" name="G6" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -148,9 +149,9 @@
               <label>Apakah terdapat darah pada urin atau feses anda?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G7" value="10"> Ya
+              <input type="radio" name="G7" value="3"> Ya
               <input type="radio" name="G7" value="10"> Terkadang
-              <input type="radio" name="G7" value="10"> Tidak
+              <input type="radio" name="G7" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -159,9 +160,9 @@
               <label>Apakah anda mengalami susah hamil?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G8" value="10"> Ya
+              <input type="radio" name="G8" value="4"> Ya
               <input type="radio" name="G8" value="10"> Terkadang
-              <input type="radio" name="G8" value="10"> Tidak
+              <input type="radio" name="G8" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -170,9 +171,9 @@
               <label>Apakah anda mengalami kembung pada perut?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G9" value="10"> Ya
+              <input type="radio" name="G9" value="3"> Ya
               <input type="radio" name="G9" value="10"> Terkadang
-              <input type="radio" name="G9" value="10"> Tidak
+              <input type="radio" name="G9" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -181,9 +182,9 @@
               <label>Apakah anda mengalami diare?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G10" value="10"> Ya
+              <input type="radio" name="G10" value="3"> Ya
               <input type="radio" name="G10" value="10"> Terkadang
-              <input type="radio" name="G10" value="10"> Tidak
+              <input type="radio" name="G10" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -192,9 +193,9 @@
               <label>Apakah anda mengalami sembelit?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G11" value="10"> Ya
+              <input type="radio" name="G11" value="5"> Ya
               <input type="radio" name="G11" value="10"> Terkadang
-              <input type="radio" name="G11" value="10"> Tidak
+              <input type="radio" name="G11" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -203,9 +204,9 @@
               <label>Apakah anda mengalami mual?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G12" value="10"> Ya
+              <input type="radio" name="G12" value="5"> Ya
               <input type="radio" name="G12" value="10"> Terkadang
-              <input type="radio" name="G12" value="10"> Tidak
+              <input type="radio" name="G12" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -214,9 +215,9 @@
               <label>Apakah anda mengalami pendarahan diluar jadwal menstruasi?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G13" value="10"> Ya
+              <input type="radio" name="G13" value="5"> Ya
               <input type="radio" name="G13" value="10"> Terkadang
-              <input type="radio" name="G13" value="10"> Tidak
+              <input type="radio" name="G13" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -225,9 +226,9 @@
               <label>Apakah anda menemukan pertumbuhan rambut tidak normal pada tubuh anda?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G14" value="10"> Ya
+              <input type="radio" name="G14" value="4"> Ya
               <input type="radio" name="G14" value="10"> Terkadang
-              <input type="radio" name="G14" value="10"> Tidak
+              <input type="radio" name="G14" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -236,9 +237,9 @@
               <label>Apakah anda mengalami kerontokan rambut?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G15" value="10"> Ya
+              <input type="radio" name="G15" value="3"> Ya
               <input type="radio" name="G15" value="10"> Terkadang
-              <input type="radio" name="G15" value="10"> Tidak
+              <input type="radio" name="G15" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -247,9 +248,9 @@
               <label>Apakah anda mengalami kelebihan berat badan atau obesitas?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G16" value="10"> Ya
+              <input type="radio" name="G16" value="3"> Ya
               <input type="radio" name="G16" value="10"> Terkadang
-              <input type="radio" name="G16" value="10"> Tidak
+              <input type="radio" name="G16" value="0"> Tidak
             </div>
           </div>
           <hr />
@@ -258,9 +259,9 @@
               <label>Apakah terdapat munculnya jerawat?</label>
             </div>
             <div class="form-group col-sm-6 mb-0 mb-2 mb-sm-0">
-              <input type="radio" name="G17" value="10"> Ya
+              <input type="radio" name="G17" value="3"> Ya
               <input type="radio" name="G17" value="10"> Terkadang
-              <input type="radio" name="G17" value="10"> Tidak
+              <input type="radio" name="G17" value="0"> Tidak
             </div>
           </div>
           <hr />

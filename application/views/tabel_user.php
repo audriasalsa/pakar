@@ -84,6 +84,14 @@
 
 						<div class="row">
 							<div class="col-xs-12">
+								<div class="col-xs-12">
+									<?php $attributes = array('class' => 'row'); ?>
+									<?php echo form_open('TabelUser/search',$attributes);?>
+										<input type="text" name="keyword" placeholder="search" class="fa fa-search">
+										<input type="submit" value="Cari" class="btn btn-primary">
+									<?php echo form_close();?>		
+								</div>
+								<br>
 								<a href="<?php echo base_url() ?>index.php/Tabeluser/tambah/" class="btn btn-md btn-success">Tambah User</a>
 								<div class="row">
 									<div class="col-xs-12">

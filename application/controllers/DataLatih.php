@@ -48,4 +48,5 @@ class DataLatih extends CI_Controller {
       echo "<script>alert('Data gagal disimpan');window.location = '".base_url('index.php/DataLatih/Form')."';</script>";
     }
   }
+ 
 }

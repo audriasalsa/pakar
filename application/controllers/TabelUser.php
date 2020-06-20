@@ -32,23 +32,42 @@ Class TabelUser extends CI_Controller{
 
     public function simpan()
     {
-        $data = array(
+        $this->form_validation->set_rules('username','Username','required');
+        $this->form_validation->set_rules('password','Password','required');
+        $this->form_validation->set_rules('level','Level','required');
 
-            'username'       => $this->input->post("username"),
-            'password'         => md5($this->input->post("password")),
-            'level'         => $this->input->post("level"),
+        if($this->form_validation->run() != false){
+            $data = array(
 
-        );
+                'username'       => $this->input->post("username"),
+                'password'         => md5($this->input->post("password")),
+                'level'         => $this->input->post("level"),
 
-        $this->user_model->simpan($data);
+            );
+            $this->user_model->simpan($data);
+            redirect('/TabelUser');
+        }
+        else{
+             ?>
+                <script type="text/javascript">
+                    alert("Harus Diisi Lengkap");
+                </script>
+            <?php
+            $data = array(
 
-        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil disimpan didatabase.
-                                                </div>');
+            'title'     => 'Tambah Data user'
+
+            );
+            $this->template->load('template','tambah_user', $data);
+        }
+    }
+        // $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil disimpan didatabase.
+                                                // </div>');
 
         //redirect
-        redirect('/TabelUser');
+        
 
-    }
+    // }
 
     public function edit($id_user)
     {
@@ -94,6 +113,24 @@ Class TabelUser extends CI_Controller{
         //redirect
         redirect('/TabelUser');
 
+    }
+
+    public function search()
+    {
+        $keyword = $this->input->post('keyword');
+        $this->db->like('id_user',$keyword);
+        $this->db->or_like('username',$keyword);
+        // $data_pasien['post'] = $this->db->get('tb_pasien')->result();
+        $data = array(
+
+            'title'     => 'Data User',
+            'data_user' => $this->db->get('tb_user')->result(),
+
+        );
+        // $this->template->load('template','tabel_pasien', $data);
+        
+        // $this->load->view('pencarian',$query);
+        $this->template->load('template','tabel_user', $data);
     }
 
 }

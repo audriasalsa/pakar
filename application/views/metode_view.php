@@ -86,34 +86,42 @@
 							<div class="col-xs-12">
 								<div class="row">
 									<div class="col-xs-12">
-										
-										<br>
-										<!-- div.table-responsive -->
-
-										<!-- div.dataTables_borderWrap -->
+									<?php $attributes = array('class' => 'row'); ?>
+									<?php echo form_open('Metode/search',$attributes);?>
+										<input type="text" name="keyword" placeholder="search" class="fa fa-search">
+										<input type="submit" value="Cari" class="btn btn-primary">
+									<?php echo form_close();?>		
+								</div>
+									<div class="col-xs-12">
 										<div>
-											
-
+											<h5>Tabel Diagnosa</h5>
 											<table id="dynamic-table" class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
 														<th>No</th>
-														<th>ID Datalatih</th>
-														<th>ID Datalatih 2</th>
-														<th>Jarak</th>
+														<th>ID Diagnosa</th>
+														<th>Tanggal</th>
+														<th>ID Pasien</th>
+														<th>ID Penyakit</th>
+														<th>Aksi</th>
 													</tr>
 												</thead>
 
 												<tbody>
 													<?php
 														$no = 1; 
-                    									foreach($data_euclidien as $hasil){ 
+                    									foreach($data_diagnosa as $hasil){ 
                 									?>
+                									<!-- <input type="hidden" name=""> -->
                   									<tr>
 									                    <td><?php echo $no++ ?></td>
-									                    <td><?php echo $hasil->id_datalatih ?></td>
-									                    <td><?php echo $hasil->id_datalatih2 ?></td>
-									                    <td><?php echo $hasil->Jarak ?></td>
+									                    <td><?php echo $hasil->id_diagnosa ?></td>
+									                    <td><?php echo $hasil->tanggal ?></td>
+									                    <td><?php echo $hasil->nama_pasien ?></td>
+									                    <td><?php echo $hasil->nama_penyakit ?></td>
+									                    <td>
+									                        <a href="<?php echo base_url() ?>index.php/detail_metode/<?php echo $hasil->id_pasien ?>" class="btn btn-sm btn-success">Detail</a>
+									                    </td>
 									                  </tr>
 
 									                <?php } ?>

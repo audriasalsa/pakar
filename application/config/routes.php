@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['keluhan/(:num)']='KeluhanUserGejala/index/$1';
 $route['keluhan/']='KeluhanUserGejala/simpan/';
+$route['metode_user/(:num)']='MetodeUser/index/$1';
+$route['detail_metode/(:num)']='DetailMetode/index/$1';

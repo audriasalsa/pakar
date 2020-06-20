@@ -59,6 +59,11 @@ Class login_model extends CI_Model {
 		}
 	}
 
+	public function isnotlogin(){
+		// return $this->session->userdata('user_logged') === null;
+		return $this->session->has_userdata('user_logged') !=true;
+	}
+
 }
 
 ?>

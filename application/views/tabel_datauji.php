@@ -10,7 +10,7 @@
 							<li>
 								<a href="#">Tables</a>
 							</li>
-							<li class="active">Tabel Data Uji</li>
+							<li class="active">Tabel datauji</li>
 						</ul> <!-- /.breadcrumb 
  -->
 					</div>
@@ -84,8 +84,14 @@
 
 						<div class="row">
 							<div class="col-xs-12">
-								<a href="<?php echo base_url() ?>index.php/Tabeluser/tambah/" class="btn btn-md btn-success">Tambah Peyakit</a>
 								<div class="row">
+								<div class="col-xs-12">
+									<?php $attributes = array('class' => 'row'); ?>
+									<?php echo form_open('TabelDataUji/search',$attributes);?>
+										<input type="text" name="keyword" placeholder="search" class="fa fa-search">
+										<input type="submit" value="Cari" class="btn btn-primary">
+									<?php echo form_close();?>		
+								</div>
 									<div class="col-xs-12">
 										
 										<br>
@@ -98,10 +104,11 @@
 											<table id="dynamic-table" class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
-														<td>ID</td>
-														<th>Username</th>
-														<th>Password</th>
-														<th>Level</th>
+														<th>No</th>
+														<th>ID Data Uji</th>
+														<th>ID Pasien</th>
+														<th>ID Gejala</th>
+														<th>Nilai</th>
 														<th>Aksi</th>
 													</tr>
 												</thead>
@@ -109,16 +116,16 @@
 												<tbody>
 													<?php
 														$no = 1; 
-                    									foreach($data_user as $hasil){ 
+                    									foreach($data_datauji as $hasil){ 
                 									?>
                   									<tr>
-									                    <td><?php echo $hasil->id_user ?></td>
-									                    <td><?php echo $hasil->username ?></td>
-									                    <td><?php echo $hasil->password ?></td>
-									                    <td><?php echo $hasil->level ?></td>
+									                    <td><?php echo $no++ ?></td>
+									                    <td><?php echo $hasil->id_datauji ?></td>
+									                    <td><?php echo $hasil->id_pasien ?></td>
+									                    <td><?php echo $hasil->id_gejala ?></td>
+									                    <td><?php echo $hasil->nilai ?></td>
 									                    <td>
-									                        <a href="<?php echo base_url() ?>index.php/TabelUser/edit/<?php echo $hasil->id_user ?>" class="btn btn-sm btn-success">Edit</a>
-									                        <a href="<?php echo base_url() ?>index.php/TabelUser/hapus/<?php echo $hasil->id_user ?>" class="btn btn-sm btn-danger">Hapus</a>
+									                        <a href="<?php echo base_url() ?>index.php/Tabeldatauji/hapus/<?php echo $hasil->id_datauji ?>" class="btn btn-sm btn-danger">Hapus</a>
 									                    </td>
 									                  </tr>
 
@@ -128,7 +135,6 @@
 										</div>
 									</div>
 								</div>
-
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->

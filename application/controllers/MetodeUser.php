@@ -2,15 +2,11 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-Class Metode extends CI_Controller{
+Class MetodeUser extends CI_Controller{
     
     public function __construct() {
         parent::__construct();
         $this->load->model("metode_model");
-        // $this->load->model("login_model");
-        // if ($this->login_model->isnotlogin()) {
-        //     redirect(site_url('Login'));
-        // }
     }
     
     public function index(){
@@ -20,10 +16,13 @@ Class Metode extends CI_Controller{
 
     public function eucdatalatih(){
         $this->metode_model->temp_euc();
+        $this->metode_model->temp_eucuji();
         $this->metode_model->temp_rank();
         $this->metode_model->temp_validitas();
+        $this->metode_model->temp_weightvoting();
         // $this->metode_model->select_gejala();
         // Simpan hasil hitung jarak
+        $id_pasien=$this->uri->segment(2);
         for($i=2; $i<=6; $i++){
             for($j=2; $j<=6; $j++){
                 //var datalatih
@@ -34,87 +33,104 @@ Class Metode extends CI_Controller{
                         case 1:
                         $G1 = $this->metode_model->select_g($i,$k);
                         $Gtes1 = $this->metode_model->select_gtes($j,$k);
+                        $Guji1 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
                     // }
                     // elseif ($k=2) {
                         case 2:
                         $G2 = $this->metode_model->select_g($i,$k);
                         $Gtes2 = $this->metode_model->select_gtes($j,$k);
+                        $Guji2 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 3:
                         $G3 = $this->metode_model->select_g($i,$k);
                         $Gtes3 = $this->metode_model->select_gtes($j,$k);
+                        $Guji3 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 4:
                         $G4 = $this->metode_model->select_g($i,$k);
                         $Gtes4 = $this->metode_model->select_gtes($j,$k);
+                        $Guji4 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 5:
                         $G5 = $this->metode_model->select_g($i,$k);
                         $Gtes5 = $this->metode_model->select_gtes($j,$k);
+                        $Guji5 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 6:
                         $G6 = $this->metode_model->select_g($i,$k);
                         $Gtes6 = $this->metode_model->select_gtes($j,$k);
+                        $Guji6 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 7:
                         $G7 = $this->metode_model->select_g($i,$k);
                         $Gtes7 = $this->metode_model->select_gtes($j,$k);
+                        $Guji7 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 8:
                         $G8 = $this->metode_model->select_g($i,$k);
                         $Gtes8 = $this->metode_model->select_gtes($j,$k);
+                        $Guji8 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 9:
                         $G9 = $this->metode_model->select_g($i,$k);
                         $Gtes9 = $this->metode_model->select_gtes($j,$k);
+                        $Guji9 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 10:
                         $G10 = $this->metode_model->select_g($i,$k);
                         $Gtes10 = $this->metode_model->select_gtes($j,$k);
+                        $Guji10 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 11:
                         $G11 = $this->metode_model->select_g($i,$k);
                         $Gtes11 = $this->metode_model->select_gtes($j,$k);
+                        $Guji11 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 12:
                         $G12 = $this->metode_model->select_g($i,$k);
                         $Gtes12 = $this->metode_model->select_gtes($j,$k);
+                        $Guji12 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 13:
                         $G13 = $this->metode_model->select_g($i,$k);
                         $Gtes13 = $this->metode_model->select_gtes($j,$k);
+                        $Guji13 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 14:
                         $G14 = $this->metode_model->select_g($i,$k);
                         $Gtes14 = $this->metode_model->select_gtes($j,$k);
+                        $Guji14 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 15:
                         $G15 = $this->metode_model->select_g($i,$k);
                         $Gtes15 = $this->metode_model->select_gtes($j,$k);
+                        $Guji15 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 16:
                         $G16 = $this->metode_model->select_g($i,$k);
                         $Gtes16 = $this->metode_model->select_gtes($j,$k);
+                        $Guji16 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
 
                         case 17:
                         $G17 = $this->metode_model->select_g($i,$k);
                         $Gtes17 = $this->metode_model->select_gtes($j,$k);
+                        $Guji17 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
                     }
                 }
@@ -139,19 +155,36 @@ Class Metode extends CI_Controller{
                         +pow((float)$G16->nilai - (float)$Gtes16->nilai ,2)
                         +pow((float)$G17->nilai - (float)$Gtes17->nilai ,2)
                 );
-                    // var_dump($rumus);
-                    // die();
-                    // echo $rumus;
-                
+                $rumusuji = sqrt(pow((float)$G1->nilai - (float)$Guji1->nilai ,2)
+                        +pow((float)$G2->nilai - (float)$Guji2->nilai ,2)
+                        +pow((float)$G3->nilai - (float)$Guji3->nilai ,2)
+                        +pow((float)$G4->nilai - (float)$Guji4->nilai ,2)
+                        +pow((float)$G5->nilai - (float)$Guji5->nilai ,2)
+                        +pow((float)$G6->nilai - (float)$Guji6->nilai ,2)
+                        +pow((float)$G7->nilai - (float)$Guji7->nilai ,2)
+                        +pow((float)$G8->nilai - (float)$Guji8->nilai ,2)
+                        +pow((float)$G9->nilai - (float)$Guji9->nilai ,2)
+                        +pow((float)$G10->nilai - (float)$Guji10->nilai ,2)
+                        +pow((float)$G11->nilai - (float)$Guji11->nilai ,2)
+                        +pow((float)$G12->nilai - (float)$Guji12->nilai ,2)
+                        +pow((float)$G13->nilai - (float)$Guji13->nilai ,2)
+                        +pow((float)$G14->nilai - (float)$Guji14->nilai ,2)
+                        +pow((float)$G15->nilai - (float)$Guji15->nilai ,2)
+                        +pow((float)$G16->nilai - (float)$Guji16->nilai ,2)
+                        +pow((float)$G17->nilai - (float)$Guji17->nilai ,2)
+                );
                     $data = array(
                         'id_datalatih' => $i,
                         'id_datalatih2' => $j,
                         'jarak' => $rumus,
                     );
                     $this->metode_model->add_euclidien($data);
-                    // var_dump($data);
-                    // die();
-                // }
+                    $datauji = array(
+                        'id_datalatih' => $i,
+                        'id_pasien' => $id_pasien,
+                        'jarak' => $rumusuji,
+                    );
+                    $this->metode_model->add_euclidienuji($datauji);
             }
         }
                 for($l=1; $l<=6; $l++){
@@ -202,24 +235,72 @@ Class Metode extends CI_Controller{
                         // die();
                         $this->metode_model->add_validitas($datav);
 
+                        $vali = $this->metode_model->get_vali($idp1);
+                        $eucuji= $this->metode_model->get_eucuji($idp1);
+                        $weightvoting = $vali->validitas*(1/($eucuji->jarak+0.5));
+
+                        // var_dump($vali,$eucuji,$weightvoting);
+                        // die();
+
+                        $datawv = array(
+                            'id_datalatih' => $datas ['id_datalatih'],
+                            'weightvoting' => $weightvoting,  
+                        );
+                        $this->metode_model->add_weightvoting($datawv);
+
+                        $k = 3;
                         
+
+                        
+                        // var_dump($print);
+                        // die();
+
                     }
 
                     // $penyakit1 = $this->metode_model->penyakit1($l);
                 }
                     
+                    $query = $this->metode_model->get_penyakitlimit($k);
+                        $array = array();
+                        foreach ( $query as $key => $val )
+                        {
+                            $temp = array_values($val);
+                            $array[] = $temp[0];
+                        }
+                        //GAYAKIN MAKS NYA BENER APA SALAH?!?!?!?
+                        // $a=array("A","Cat","Dog","A","Dog");
+                        $print[] = array_count_values($array);
+                        $max   = $array[0];
+                        for ($i=1; $i < count($print); $i++) { 
+                            if ($print[$i] > $max) {
+                                $max = $print[$i];
+                            }
+                        }
+        
+                        $now=date('Y-m-d');
+                        $this->db->set('tanggal', 'NOW()', FALSE);
+                        $this->db->set('id_pasien', $id_pasien);
+                        $this->db->set('id_penyakit', $max);
+                        $this->db->insert('tb_diagnosa');
+
                     $data = array(
 
                         'title'     => 'Data Datalatih',
                         'data_euclidien' => $this->metode_model->euclidien(),
                         'data_ranking' => $this->metode_model->ranking2(), 
                         'data_validitas'=> $this->metode_model->get_validitas(),
-                        'data_diagnosa'=> $this->metode_model->get_diagnosa2(),
+                        'data_uji'=> $this->metode_model->datauji($id_pasien),
+                        'data_euclidienuji' => $this->metode_model->euclidienuji(),
+                        'data_weightvoting' =>$this->metode_model->get_weightvoting(),
+                        'data_weightvotinglimit' =>$this->metode_model->get_weightvotinglimit($k),
+                        'data_diagnosa' => $this->metode_model->get_diagnosa($id_pasien),
 
                     );
-                    // var_dump($data);
+
+                    // var_dump($max);
                     // die();
-                    $this->template->load('template','metode_view', $data);
+                    $this->load->view('user/metodeuser_view',$data);
+                    // $this->template->load('template','user/index_user', $data);
                 // }
                 
         //     }
@@ -227,24 +308,8 @@ Class Metode extends CI_Controller{
 
     }
 
-    public function search()
-    {
-        $keyword = $this->input->post('keyword');
-        $this->db->like('id_diagnosa',$keyword);
-        $this->db->or_like('tanggal',$keyword);
-        $this->db->or_like('nama_pasien',$keyword);
-        $this->db->or_like('nama_penyakit',$keyword);
-        // $data_pasien['post'] = $this->db->get('tb_pasien')->result();
-        $data = array(
-
-            'title'     => 'Diagnosa',
-            'data_diagnosa' => $this->metode_model->get_diagnosa2(),
-
-        );
-        // $this->template->load('template','tabel_pasien', $data);
+    public function eucdatauji(){
         
-        // $this->load->view('pencarian',$query);
-        $this->template->load('template','metode_view', $data);
     }
 
 

@@ -13,15 +13,25 @@ class Login extends CI_Controller {
 
     public function index()
     {
-            
 
-            if($this->admin_model->logged_id())
-            {
-                //jika memang session sudah terdaftar, maka redirect ke halaman dahsboard
-                // $this->session->set_userdata('username',$username);
-                redirect('example');
+            // if($this->admin_model->logged_id())
+            // {
+            //     //jika memang session sudah terdaftar, maka redirect ke halaman dahsboard
+            //     $this->session->set_userdata('username',$username);
+            //     // $username = $this->input->post("username");
+            //     // $level = $this->admin_model->cek_level($username);
+            //     // var_dump($level);
+            //     // die();
+            //     // if ($level = 1) {
+            //     //     redirect('example');
+            //     // }
+            //     // else{
+            //     //     redirect('/BerandaUser');
+            //     // }
 
-            }else{
+                
+
+            // }else{
 
                 //jika session belum terdaftar
 
@@ -45,21 +55,38 @@ class Login extends CI_Controller {
 
                 //jika ditemukan, maka create session
                 if ($checking != FALSE) {
-                    foreach ($checking as $apps) {
-
+                    
+                        
                         $session_data = array(
-                            'id_user'   => $apps->id_user,
-                            'username' => $apps->username,
-                            'password' => $apps->password,
+                            'id_user'   => $checking->id_user,
+                            'username' => $checking->username,
+                            'password' => $checking->password,
+                            'user_logged' => true,
                         );
                         // $username = "1";
                         //set session userdata
+                        // $this->session->set_userdata(['user_logged'=> $session_data]);
+                        // $username = $apps->username;
+                        $level = $this->admin_model->cek_level($username);  
                         $this->session->set_userdata($session_data);
-                        // $this->session->set_userdata('username',$username);
-                        redirect('example/');
+                        // $this->session->set_userdata($session_data);
+                        // $this->admin_model->cek_login($username);
+                        // var_dump($_SESSION);
+                        // die();
+                        
+                        
+                        if ($level->level == 1) {
+                            redirect('/BerandaUser');
+                        }
+                        else{
+                          
+                            //var_dump($this->session->userdata('id_user'));
+                            // die();
+                            redirect('/example');
+                        }
                         
 
-                    }
+                
                 }else{
 
                     $data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
@@ -72,13 +99,14 @@ class Login extends CI_Controller {
                 $this->load->view('login_view');
             }
 
-        }
+        // }
 
     }
 
     function logout()
     {
         $this->session->unset_userdata(array('username' =>''));
+        $this->session->unset_userdata('user_logged');
         redirect('/Login');
     }
 }

@@ -13,8 +13,7 @@ class keluhanUserModel extends CI_Model
         'id_pasien'=> $id_pasien,
         'id_gejala' => $id_gejala,
         'nilai' => $nilai            
-    );
-    $this->db->insert('tb_datauji', $data);
-
+        );
+        $this->db->insert('tb_datauji', $data);
     }
 }

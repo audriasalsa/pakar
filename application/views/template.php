@@ -177,7 +177,7 @@
 							</li>
 
 							<li class="">
-								<a href="<?php echo site_url('TabelUser') ?>">
+								<a href="<?php echo site_url('TabelDataUji') ?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Tabel Data Uji
 								</a>
