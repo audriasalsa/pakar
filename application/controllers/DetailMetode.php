@@ -15,6 +15,7 @@ Class DetailMetode extends CI_Controller{
     }
 
     public function eucdatalatih(){
+        set_time_limit(900);
         $this->metode_model->temp_euc();
         $this->metode_model->temp_eucuji();
         $this->metode_model->temp_rank();
@@ -25,7 +26,7 @@ Class DetailMetode extends CI_Controller{
         // die();
         // $this->metode_model->select_gejala();
         // Simpan hasil hitung jarak
-        $jumlahpasien=6;
+        $jumlahpasien=33;
         $jumlahgejala=24;
         for($i=2; $i<=$jumlahpasien; $i++){
             for($j=2; $j<=$jumlahpasien; $j++){
@@ -200,6 +201,13 @@ Class DetailMetode extends CI_Controller{
                         +pow((float)$G15->nilai - (float)$Gtes15->nilai ,2)
                         +pow((float)$G16->nilai - (float)$Gtes16->nilai ,2)
                         +pow((float)$G17->nilai - (float)$Gtes17->nilai ,2)
+                        +pow((float)$G18->nilai - (float)$Gtes18->nilai ,2)
+                        +pow((float)$G19->nilai - (float)$Gtes19->nilai ,2)
+                        +pow((float)$G20->nilai - (float)$Gtes20->nilai ,2)
+                        +pow((float)$G21->nilai - (float)$Gtes21->nilai ,2)
+                        +pow((float)$G22->nilai - (float)$Gtes22->nilai ,2)
+                        +pow((float)$G23->nilai - (float)$Gtes23->nilai ,2)
+                        +pow((float)$G24->nilai - (float)$Gtes24->nilai ,2)
                 );
                 $rumusuji = sqrt(pow((float)$G1->nilai - (float)$Guji1->nilai ,2)
                         +pow((float)$G2->nilai - (float)$Guji2->nilai ,2)
@@ -218,6 +226,13 @@ Class DetailMetode extends CI_Controller{
                         +pow((float)$G15->nilai - (float)$Guji15->nilai ,2)
                         +pow((float)$G16->nilai - (float)$Guji16->nilai ,2)
                         +pow((float)$G17->nilai - (float)$Guji17->nilai ,2)
+                        +pow((float)$G18->nilai - (float)$Guji18->nilai ,2)
+                        +pow((float)$G19->nilai - (float)$Guji19->nilai ,2)
+                        +pow((float)$G20->nilai - (float)$Guji20->nilai ,2)
+                        +pow((float)$G21->nilai - (float)$Guji21->nilai ,2)
+                        +pow((float)$G22->nilai - (float)$Guji22->nilai ,2)
+                        +pow((float)$G23->nilai - (float)$Guji23->nilai ,2)
+                        +pow((float)$G24->nilai - (float)$Guji24->nilai ,2)
                 );
                     // var_dump($rumus);
                     // die();
@@ -276,7 +291,7 @@ Class DetailMetode extends CI_Controller{
                         
                         $jumlahn = $this->metode_model->jumlahn($idp1);
                         // $datan['jumlahn'] = $this->metode_model->jumlahn($idp1);
-                        $k = 3;
+                        $k = 9;
                         $rumusv = (1/$k)*((float)$jumlahn->jmln);
                         $datav = array(
                             'id_datalatih' => $datas ['id_datalatih'],

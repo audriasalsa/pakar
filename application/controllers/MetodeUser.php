@@ -15,6 +15,7 @@ Class MetodeUser extends CI_Controller{
     }
 
     public function eucdatalatih(){
+        set_time_limit(900);
         $this->metode_model->temp_euc();
         $this->metode_model->temp_eucuji();
         $this->metode_model->temp_rank();
@@ -23,11 +24,12 @@ Class MetodeUser extends CI_Controller{
         // $this->metode_model->select_gejala();
         // Simpan hasil hitung jarak
         $id_pasien=$this->uri->segment(2);
-        $jumlahpasien=6;
-        for($i=2; $i<=6; $i++){
-            for($j=2; $j<=6; $j++){
+        $jumlahpasien=24;
+        $jumlahgejala=24;
+        for($i=2; $i<=$jumlahpasien; $i++){
+            for($j=2; $j<=$jumlahpasien; $j++){
                 //var datalatih
-                for ($k=1; $k<=17 ; $k++) {
+                for ($k=1; $k<=$jumlahgejala ; $k++) {
 
                     switch ($k) {
                         
@@ -133,6 +135,48 @@ Class MetodeUser extends CI_Controller{
                         $Gtes17 = $this->metode_model->select_gtes($j,$k);
                         $Guji17 = $this->metode_model->select_guji($id_pasien,$k);
                         break;
+
+                        case 18:
+                        $G18 = $this->metode_model->select_g($i,$k);
+                        $Gtes18 = $this->metode_model->select_gtes($j,$k);
+                        $Guji18 = $this->metode_model->select_guji($id_pasien,$k);
+                        break;
+
+                        case 19:
+                        $G19 = $this->metode_model->select_g($i,$k);
+                        $Gtes19 = $this->metode_model->select_gtes($j,$k);
+                        $Guji19 = $this->metode_model->select_guji($id_pasien,$k);
+                        break;
+
+                        case 20:
+                        $G20 = $this->metode_model->select_g($i,$k);
+                        $Gtes20 = $this->metode_model->select_gtes($j,$k);
+                        $Guji20 = $this->metode_model->select_guji($id_pasien,$k);
+                        break;
+
+                        case 21:
+                        $G21 = $this->metode_model->select_g($i,$k);
+                        $Gtes21 = $this->metode_model->select_gtes($j,$k);
+                        $Guji21 = $this->metode_model->select_guji($id_pasien,$k);
+                        break;
+
+                        case 22:
+                        $G22 = $this->metode_model->select_g($i,$k);
+                        $Gtes22 = $this->metode_model->select_gtes($j,$k);
+                        $Guji22 = $this->metode_model->select_guji($id_pasien,$k);
+                        break;
+
+                        case 23:
+                        $G23 = $this->metode_model->select_g($i,$k);
+                        $Gtes23 = $this->metode_model->select_gtes($j,$k);
+                        $Guji23 = $this->metode_model->select_guji($id_pasien,$k);
+                        break;
+
+                        case 24:
+                        $G24 = $this->metode_model->select_g($i,$k);
+                        $Gtes24 = $this->metode_model->select_gtes($j,$k);
+                        $Guji24 = $this->metode_model->select_guji($id_pasien,$k);
+                        break;
                     }
                 }
 
@@ -155,6 +199,13 @@ Class MetodeUser extends CI_Controller{
                         +pow((float)$G15->nilai - (float)$Gtes15->nilai ,2)
                         +pow((float)$G16->nilai - (float)$Gtes16->nilai ,2)
                         +pow((float)$G17->nilai - (float)$Gtes17->nilai ,2)
+                        +pow((float)$G18->nilai - (float)$Gtes18->nilai ,2)
+                        +pow((float)$G19->nilai - (float)$Gtes19->nilai ,2)
+                        +pow((float)$G20->nilai - (float)$Gtes20->nilai ,2)
+                        +pow((float)$G21->nilai - (float)$Gtes21->nilai ,2)
+                        +pow((float)$G22->nilai - (float)$Gtes22->nilai ,2)
+                        +pow((float)$G23->nilai - (float)$Gtes23->nilai ,2)
+                        +pow((float)$G24->nilai - (float)$Gtes24->nilai ,2)
                 );
                 $rumusuji = sqrt(pow((float)$G1->nilai - (float)$Guji1->nilai ,2)
                         +pow((float)$G2->nilai - (float)$Guji2->nilai ,2)
@@ -173,6 +224,13 @@ Class MetodeUser extends CI_Controller{
                         +pow((float)$G15->nilai - (float)$Guji15->nilai ,2)
                         +pow((float)$G16->nilai - (float)$Guji16->nilai ,2)
                         +pow((float)$G17->nilai - (float)$Guji17->nilai ,2)
+                        +pow((float)$G18->nilai - (float)$Guji18->nilai ,2)
+                        +pow((float)$G19->nilai - (float)$Guji19->nilai ,2)
+                        +pow((float)$G20->nilai - (float)$Guji20->nilai ,2)
+                        +pow((float)$G21->nilai - (float)$Guji21->nilai ,2)
+                        +pow((float)$G22->nilai - (float)$Guji22->nilai ,2)
+                        +pow((float)$G23->nilai - (float)$Guji23->nilai ,2)
+                        +pow((float)$G24->nilai - (float)$Guji24->nilai ,2)
                 );
                     $data = array(
                         'id_datalatih' => $i,
@@ -188,7 +246,7 @@ Class MetodeUser extends CI_Controller{
                     $this->metode_model->add_euclidienuji($datauji);
             }
         }
-                for($l=1; $l<=6; $l++){
+                for($l=1; $l<=$jumlahpasien; $l++){
                     $ranking = $this->metode_model->ranking($l);
                     foreach ($ranking as $datas) {
                         $datas     = get_object_vars($datas);
@@ -227,7 +285,8 @@ Class MetodeUser extends CI_Controller{
                         
                         $jumlahn = $this->metode_model->jumlahn($idp1);
                         // $datan['jumlahn'] = $this->metode_model->jumlahn($idp1);
-                        $rumusv = (1/3)*((float)$jumlahn->jmln);
+                        $k = 1;
+                        $rumusv = (1/$k)*((float)$jumlahn->jmln);
                         $datav = array(
                             'id_datalatih' => $datas ['id_datalatih'],
                             'validitas' => $rumusv,  

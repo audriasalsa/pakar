@@ -31,4 +31,8 @@ class ImportModel extends CI_Model {
 	public function insert_multiple($data){
 		$this->db->insert_batch('tb_datalatih', $data);
 	}
+
+	public function delete_all(){
+		$this->db->empty_table('tb_datalatih');
+	}
 }

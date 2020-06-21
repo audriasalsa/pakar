@@ -135,4 +135,9 @@ class Import extends CI_Controller {
         // $this->load->view('pencarian',$query);
         $this->template->load('template','tabel_datalatih', $data);
     }
+
+    public function delete_all(){
+    	$this->ImportModel->delete_all();
+    	redirect("/Import");
+    }
 }

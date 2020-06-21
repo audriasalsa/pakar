@@ -93,6 +93,9 @@
 								</div>
 								<br>
 								<a href="<?php echo base_url() ?>index.php/Import/form/" class="btn btn-md btn-success">Tambah Data Latih</a>
+								<br>
+								<br>
+								<a href="<?php echo base_url() ?>index.php/Import/delete_all/" class="btn btn-md btn-danger">Hapus Semua Data Latih</a>
 								<div class="row">
 									<div class="col-xs-12">
 										
