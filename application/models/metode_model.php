@@ -264,8 +264,7 @@ class metode_model extends CI_Model
         elseif ($k=24) {
             $Gtes24 = $query->row();
             return $Gtes24;
-        }
-        
+        }     
     }
 
     public function select_guji($id_pasien,$k){
@@ -589,7 +588,7 @@ class metode_model extends CI_Model
     }
 
     public function get_diagnosa($id_pasien){
-        $query = $this->db->select("tb_penyakit.nama_penyakit")
+        $query = $this->db->select("tb_penyakit.nama_penyakit, tb_penyakit.solusi_penyakit")
                  ->from('tb_diagnosa')
                  ->join('tb_penyakit','tb_penyakit.id_penyakit = tb_diagnosa.id_penyakit')
                  ->where('tb_diagnosa.id_pasien', $id_pasien)

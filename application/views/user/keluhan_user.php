@@ -41,7 +41,7 @@
               <li class="nav-item"><a class="nav-link" href="<?php echo base_url('index.php/KeluhanUser')?>">Keluhan </a></li>
             </ul>
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="<?php echo base_url('index.php/KeluhanUser')?>">Logout </a></li>
+              <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Login/logout/') ?>">Logout </a></li>
             </ul>
           </div>
         </div>

@@ -2,7 +2,14 @@
 
 class ImportModel extends CI_Model {
 	public function view(){
-		return $this->db->get('tb_datalatih')->result(); // Tampilkan semua data yang ada di tabel datalatih
+		// return $this->db->get('tb_datalatih')->result(); // Tampilkan semua data yang ada di tabel datalatih
+		$query = $this->db->select("tb_pasien.nama_pasien, tb_gejala.nama_gejala, tb_datalatih.nilai, tb_penyakit.nama_penyakit")
+                 ->from('tb_datalatih')
+                 ->join('tb_pasien','tb_pasien.id_pasien = tb_datalatih.id_pasien')
+                 ->join('tb_gejala','tb_gejala.id_gejala = tb_datalatih.id_gejala')
+                 ->join('tb_penyakit','tb_penyakit.id_penyakit = tb_datalatih.id_penyakit')
+                 ->get();
+        return $query->result();
 	}
 	
 	// Fungsi untuk melakukan proses upload file

@@ -15,7 +15,7 @@ Class DetailMetode extends CI_Controller{
     }
 
     public function eucdatalatih(){
-        set_time_limit(900);
+        set_time_limit(1200);
         $this->metode_model->temp_euc();
         $this->metode_model->temp_eucuji();
         $this->metode_model->temp_rank();
@@ -26,7 +26,7 @@ Class DetailMetode extends CI_Controller{
         // die();
         // $this->metode_model->select_gejala();
         // Simpan hasil hitung jarak
-        $jumlahpasien=33;
+        $jumlahpasien=21;
         $jumlahgejala=24;
         for($i=2; $i<=$jumlahpasien; $i++){
             for($j=2; $j<=$jumlahpasien; $j++){

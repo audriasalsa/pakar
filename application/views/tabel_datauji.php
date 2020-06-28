@@ -1,3 +1,8 @@
+<head>
+	<script src="<?php echo base_url()?>assets/js/jquery.min.js"></script>
+	<script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url()?>assets/js/jquery-1.9.1.min.js"></script>
+</head>
 			<div class="main-content">
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
@@ -85,13 +90,6 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="row">
-								<div class="col-xs-12">
-									<?php $attributes = array('class' => 'row'); ?>
-									<?php echo form_open('TabelDataUji/search',$attributes);?>
-										<input type="text" name="keyword" placeholder="search" class="fa fa-search">
-										<input type="submit" value="Cari" class="btn btn-primary">
-									<?php echo form_close();?>		
-								</div>
 									<div class="col-xs-12">
 										
 										<br>
@@ -101,11 +99,11 @@
 										<div>
 											
 
-											<table id="dynamic-table" class="table table-striped table-bordered table-hover">
+											<table id="dt-basic" class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
 														<th>No</th>
-														<th>ID Data Uji</th>
+														<!-- <th>ID Data Uji</th> -->
 														<th>ID Pasien</th>
 														<th>ID Gejala</th>
 														<th>Nilai</th>
@@ -120,9 +118,9 @@
                 									?>
                   									<tr>
 									                    <td><?php echo $no++ ?></td>
-									                    <td><?php echo $hasil->id_datauji ?></td>
-									                    <td><?php echo $hasil->id_pasien ?></td>
-									                    <td><?php echo $hasil->id_gejala ?></td>
+									                    <!-- <td><?php echo $hasil->id_datauji ?></td> -->
+									                    <td><?php echo $hasil->nama_pasien ?></td>
+									                    <td><?php echo $hasil->nama_gejala ?></td>
 									                    <td><?php echo $hasil->nilai ?></td>
 									                    <td>
 									                        <a href="<?php echo base_url() ?>index.php/Tabeldatauji/hapus/<?php echo $hasil->id_datauji ?>" class="btn btn-sm btn-danger">Hapus</a>
@@ -138,3 +136,20 @@
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->
+		<script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+		<!-- Plugins -->
+		<script src="<?php echo base_url() ?>assets/js/holder.min.js"></script>
+		<!-- Custom -->
+		<script src="<?php echo base_url() ?>assets/js/custom.js"></script>
+
+		<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jquery.dataTables.min.css">
+		<script src="<?php echo base_url() ?>assets/js/jquery.dataTables.min.js"></script>
+		<script src="<?php echo base_url() ?>assets/js/jquery.dataTables.bootstrap4.min.js"></script>
+		<script>
+		    jQuery(document).ready(function(){
+
+		        // Contoh inisialisasi Datatable tanpa konfigurasi apapun
+		        // #dt-basic adalah id html dari tabel yang diinisialisasi
+		        $('#dt-basic').DataTable();
+		    });
+		</script>

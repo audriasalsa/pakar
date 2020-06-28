@@ -20,7 +20,7 @@ Class KeluhanUser extends CI_Controller{
 
         $this->form_validation->set_rules('nama_pasien','Nama Pasien','required');
         $this->form_validation->set_rules('umur','Umur','required|greater_than[11]');
-
+ 
         // $data = array(
 
         //     'nama_pasien'         => $this->input->post("nama_pasien"),

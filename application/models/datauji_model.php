@@ -7,9 +7,16 @@ class datauji_model extends CI_Model
 {
     public function get_all()
     {
-        $query = $this->db->select("*")
+        // $query = $this->db->select("*")
+        //          ->from('tb_datauji')
+        //          ->order_by('id_datauji', 'ASC')
+        //          ->get();
+        // return $query->result();
+
+        $query = $this->db->select("tb_pasien.nama_pasien, tb_gejala.nama_gejala, tb_datauji.nilai, tb_datauji.id_datauji")
                  ->from('tb_datauji')
-                 ->order_by('id_datauji', 'ASC')
+                 ->join('tb_pasien','tb_pasien.id_pasien = tb_datauji.id_pasien')
+                 ->join('tb_gejala','tb_gejala.id_gejala = tb_datauji.id_gejala')
                  ->get();
         return $query->result();
     }

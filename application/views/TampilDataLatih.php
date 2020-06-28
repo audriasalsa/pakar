@@ -28,7 +28,6 @@
     foreach($datalatih as $data){
       echo "<tr>";
       echo "<td>".$no."</td>";
-      echo "<td>".$data->id_datalatih."</td>";
       echo "<td>".$data->nama_pasien."</td>";
       echo "<td>".$data->id_gejala."</td>";
       echo "<td>".$data->nilai."</td>";

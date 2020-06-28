@@ -41,7 +41,7 @@
               <li class="nav-item"><a class="nav-link" href="<?php echo base_url('index.php/KeluhanUser')?>">Keluhan </a></li>
             </ul>
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="<?php echo base_url('index.php/KeluhanUser')?>">Logout </a></li>
+              <li class="nav-item"><a class="nav-link" href="<?php echo site_url('Login/logout/') ?>">Logout </a></li>
             </ul>
           </div>
         </div>
@@ -154,7 +154,7 @@
             <th>No</th>
             <th>ID Pasien</th>
             <th>ID Gejala</th>
-            <th>Nilai</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -251,6 +251,7 @@
         <thead>
           <tr>
             <th>Diagnosa</th>
+            <th>Solusi</th>
           </tr>
         </thead>
         <tbody>
@@ -259,6 +260,7 @@
           ?>
             <tr>
               <td><?php echo $hasil->nama_penyakit ?></td>
+              <td><?php echo $hasil->solusi_penyakit ?></td>
             </tr>
           <?php } ?>
         </tbody>     
