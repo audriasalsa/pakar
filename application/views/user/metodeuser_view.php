@@ -222,7 +222,7 @@
             </tr>
           <?php } ?>
         </tbody>     
-      </table>
+      </table> -->
       <table id="dynamic-table" class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
@@ -238,14 +238,14 @@
             foreach($data_weightvotinglimit as $hasil){ 
           ?>
             <tr>
-              <td><?php echo $no++ ?></td>
-              <td><?php echo $hasil->id_datalatih ?></td>
-              <td><?php echo $hasil->weightvoting ?></td>
-              <td><?php echo $hasil->id_penyakit ?></td>
+                                  <td><?php echo $no++ ?></td>
+                                  <td><?php echo $hasil->id_datalatih ?></td>
+                                  <td><?php echo $hasil->weightvoting ?></td>
+                                  <td><?php echo $hasil->id_penyakit ?></td>
             </tr>
           <?php } ?>
         </tbody>     
-      </table> -->
+      </table>
        <h5>Hasil Diagnosa</h5>
       <table id="dynamic-table" class="table table-striped table-bordered table-hover">
         <thead>

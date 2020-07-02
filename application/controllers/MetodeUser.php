@@ -285,7 +285,7 @@ Class MetodeUser extends CI_Controller{
                         
                         $jumlahn = $this->metode_model->jumlahn($idp1);
                         // $datan['jumlahn'] = $this->metode_model->jumlahn($idp1);
-                        $k = 1;
+                        $k = 3;
                         $rumusv = (1/$k)*((float)$jumlahn->jmln);
                         $datav = array(
                             'id_datalatih' => $datas ['id_datalatih'],
@@ -308,7 +308,7 @@ Class MetodeUser extends CI_Controller{
                         );
                         $this->metode_model->add_weightvoting($datawv);
 
-                        $k = 3;
+                        // $k = 3;
                         
 
                         
@@ -331,6 +331,7 @@ Class MetodeUser extends CI_Controller{
                         // $a=array("A","Cat","Dog","A","Dog");
                         $print[] = array_count_values($array);
                         $max   = $array[0];
+                        // $max   = max($array);
                         for ($i=1; $i < count($print); $i++) { 
                             if ($print[$i] > $max) {
                                 $max = $print[$i];
