@@ -443,6 +443,18 @@ class metode_model extends CI_Model
         return $query->result();
     }
 
+    public function dataujiuser($id_pasien){
+        $query = $this->db->select("tb_datauji.id_pasien, tb_pasien.nama_pasien, tb_gejala.nama_gejala, tb_datauji.nilai")
+                 ->from('tb_datauji')
+                 ->join('tb_pasien','tb_pasien.id_pasien = tb_datauji.id_pasien')
+                 ->join('tb_gejala','tb_gejala.id_gejala = tb_datauji.id_gejala')
+                 // ->order_by('jarak', 'desc')
+                 ->where('tb_datauji.id_pasien',$id_pasien)
+                 ->where('tb_datauji.nilai >','0')
+                 ->get();
+        return $query->result();
+    }
+
     public function ranking2(){
         $query = $this->db->select("*")
                  ->from('ranking')

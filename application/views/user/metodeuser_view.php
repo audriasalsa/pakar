@@ -152,9 +152,7 @@
         <thead>
           <tr>
             <th>No</th>
-            <th>ID Pasien</th>
-            <th>ID Gejala</th>
-            <th>Status</th>
+            <th>Gejala Pasien</th>
           </tr>
         </thead>
         <tbody>
@@ -164,17 +162,7 @@
           ?>
             <tr>
               <td><?php echo $no++ ?></td>
-              <td><?php echo $hasil->nama_pasien ?></td>
               <td><?php echo $hasil->nama_gejala ?></td>
-              <?php
-                if ($hasil->nilai > 0) {
-                  $status = "Ya";
-                }
-                else{
-                  $status = "Tidak";
-                }
-              ?>
-              <td><?php echo $status ?></td>
             </tr>
           <?php } ?>
         </tbody>     
